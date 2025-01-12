@@ -1,11 +1,8 @@
-import CoreGraphics
+import Foundation
 
-enum GameConstraints {
-    static let designWidth: CGFloat = 390
-    static let designHeight: CGFloat = 844
-    
-    static func adaptedSize(for size: CGSize, to screenSize: CGSize) -> CGSize {
-        let scale = min(screenSize.width / designWidth, screenSize.height / designHeight)
-        return CGSize(width: size.width * scale, height: size.height * scale)
-    }
+struct GameConstraints {
+    static let catSpeed: CGFloat = 400.0
+    static let raindropSpawnInterval: TimeInterval = 1.0
+    static let slowDownDuration: TimeInterval = 5.0
+    static let invincibilityDuration: TimeInterval = 3.0
 }

@@ -1,42 +1,25 @@
-//
-//  ButtonView.swift
-//  BobRunner
-//
-//  Created by Horváth Balázs on 2018. 05. 11..
-//  Copyright © 2018. Horváth Balázs. All rights reserved.
-//
+import UIKit
 
-import SpriteKit
-
-class ButtonView: UIView {
-    // MARK: Properties
-    let btnLoadNextStage = UIButton.makeLoadNext()
-    let btnReloadStage = UIButton.makeReload()
-    let btnReplayGame = UIButton.makeReplayGame()
-
-    var buttons: [UIButton] {
-        return [btnLoadNextStage, btnReloadStage, btnReplayGame]
-    }
-
-    // MARK: Initializers
+class ButtonView: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupButton()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-}
-
-// MARK: - Button configuration
-extension ButtonView {
-    func alignCenter(in view: SKView) {
-        buttons.forEach { $0.alignCenter(in: view) }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupButton()
     }
 
-    func setActions(for gameVC: GameViewController) {
-        btnLoadNextStage.addTarget(gameVC, action: #selector(gameVC.loadNextStage), for: .touchUpInside)
-        btnReloadStage.addTarget(gameVC, action: #selector(gameVC.reloadStage), for: .touchUpInside)
-        btnReplayGame.addTarget(gameVC, action: #selector(gameVC.replayGame), for: .touchUpInside)
+    private func setupButton() {
+        self.backgroundColor = .systemBlue
+        self.setTitleColor(.white, for: .normal)
+        self.layer.cornerRadius = 10
+        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+    }
+
+    func configure(title: String, action: Selector, target: Any) {
+        self.setTitle(title, for: .normal)
+        self.addTarget(target, action: action, for: .touchUpInside)
     }
 }

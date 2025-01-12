@@ -1,29 +1,33 @@
 import SpriteKit
 
-struct Stage {
-    static var maxCount: Int {
-        var stageNumber = 0
-        while SKScene(fileNamed: "Stage\(stageNumber + 1)") != nil {
-            stageNumber += 1
+class Stage {
+    var obstacles: [SKSpriteNode] = []
+    var powerUps: [PowerUp] = []
+    
+    func generateObstacles(for scene: SKScene) {
+        for _ in 0..<5 {
+            let obstacle = SKSpriteNode(imageNamed: "obstacle")
+            obstacle.size = CGSize(width: 50, height: 50)
+            obstacle.position = CGPoint(x: CGFloat.random(in: 50...scene.size.width - 50),
+                                        y: scene.size.height + 50)
+            obstacle.physicsBody = SKPhysicsBody(rectangleOf: obstacle.size)
+            obstacle.physicsBody?.categoryBitMask = PhysicsCategory.obstacle
+            obstacle.physicsBody?.contactTestBitMask = PhysicsCategory.cat
+            obstacle.physicsBody?.collisionBitMask = PhysicsCategory.none
+            obstacle.physicsBody?.affectedByGravity = false
+            obstacles.append(obstacle)
+            scene.addChild(obstacle)
         }
-        return stageNumber
     }
-
-    static var current: Int {
-        get {
-            return UserDefaults.standard.integer(forKey: "actualStage")
+    
+    func generatePowerUps(for scene: SKScene) {
+        let powerUpTypes: [PowerUp.PowerUpType] = [.slowDown, .invincibility]
+        for type in powerUpTypes {
+            let powerUp = PowerUp(type: type,
+                                  position: CGPoint(x: CGFloat.random(in: 50...scene.size.width - 50),
+                                                    y: scene.size.height + 100))
+            powerUps.append(powerUp)
+            scene.addChild(powerUp)
         }
-        set(newStage) {
-            UserDefaults.standard.set(newStage, forKey: "actualStage")
-            UserDefaults.standard.synchronize()
-        }
-    }
-
-    static var name: String {
-        return "Stage\(current)"
-    }
-
-    static func obstacleSpeed(forStage stage: Int) -> TimeInterval {
-        return max(3.0 - Double(stage) * 0.5, 1.5)
     }
 }
