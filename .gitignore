@@ -1,4 +1,51 @@
-# Xcode
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Xcode project workspace and derived data
+xcuserdata/
+DerivedData/
+*.xcworkspace
+
+# Ignore temporary or backup files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*~
+
+# Ignore build artifacts
+build/
+*.o
+*.a
+*.so
+*.dylib
+
+# Ignore Pods directory if using CocoaPods
+Pods/
+
+# Ignore Carthage build directory
+Carthage/Build/
+
+# Ignore SPM artifacts
+.swiftpm/
+.build/
+
+# Ignore fastlane files
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Ignore specific folders from your project
+BobRunner/
+NyanKitty/clean_up_structure.sh
+NyanKitty/Resources/OldAssets/
+
+# Ignore environment or sensitive files
+.env
+*.key
+*.pem# Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 

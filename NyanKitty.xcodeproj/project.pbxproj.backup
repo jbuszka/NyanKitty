@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D59497E2D32E4E8005AFFB3 /* GameConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59497D2D32E4DD005AFFB3 /* GameConstraints.swift */; };
+		5D5949802D32E61A005AFFB3 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59497F2D32E608005AFFB3 /* GameOverScene.swift */; };
+		5D5949822D32E6D3005AFFB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5949812D32E6CB005AFFB3 /* ContentView.swift */; };
+		5D5949852D3301C6005AFFB3 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 5D5949842D3301C6005AFFB3 /* SwiftLintFramework */; };
+		5D5949872D3301C6005AFFB3 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 5D5949862D3301C6005AFFB3 /* swiftlint */; };
 		AC0890C51ED64EE800CB1833 /* RaindropExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = AC0890C41ED64EE800CB1833 /* RaindropExplosion.sks */; };
 		AC1A69FB1F87F8AA0066CED5 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A69FA1F87F8AA0066CED5 /* Stage.swift */; };
 		AC312DEC1EF4586E004CBBA0 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC312DEB1EF4586E004CBBA0 /* Cat.swift */; };
@@ -41,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D59497D2D32E4DD005AFFB3 /* GameConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstraints.swift; sourceTree = "<group>"; };
+		5D59497F2D32E608005AFFB3 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		5D5949812D32E6CB005AFFB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC0890C41ED64EE800CB1833 /* RaindropExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RaindropExplosion.sks; sourceTree = "<group>"; };
 		AC1A69FA1F87F8AA0066CED5 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		AC312DEB1EF4586E004CBBA0 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
@@ -51,7 +59,7 @@
 		AC8B5817209E651400DBBC25 /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		AC8B5819209EED6100DBBC25 /* SKViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKViewExtensions.swift; sourceTree = "<group>"; };
 		AC8B581F209F2ECB00DBBC25 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
-		AC903D181ED31F150016910C /* BobRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC903D181ED31F150016910C /* NyanKitty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NyanKitty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC903D1B1ED31F150016910C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC903D1D1ED31F150016910C /* Stage1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stage1.sks; sourceTree = "<group>"; };
 		AC903D211ED31F150016910C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -81,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5949852D3301C6005AFFB3 /* SwiftLintFramework in Frameworks */,
+				5D5949872D3301C6005AFFB3 /* swiftlint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				AC903D211ED31F150016910C /* GameScene.swift */,
+				5D59497F2D32E608005AFFB3 /* GameOverScene.swift */,
 				AC8B5809209E5FD800DBBC25 /* Stages */,
 				AC8B580A209E605400DBBC25 /* HUD */,
 				AC8B580C209E608100DBBC25 /* Dinamic elements */,
@@ -215,7 +226,7 @@
 		AC903D0F1ED31F150016910C = {
 			isa = PBXGroup;
 			children = (
-				AC903D1A1ED31F150016910C /* BobRunner */,
+				AC903D1A1ED31F150016910C /* NyanKitty */,
 				AC903D191ED31F150016910C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -223,16 +234,17 @@
 		AC903D191ED31F150016910C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC903D181ED31F150016910C /* BobRunner.app */,
+				AC903D181ED31F150016910C /* NyanKitty.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC903D1A1ED31F150016910C /* BobRunner */ = {
+		AC903D1A1ED31F150016910C /* NyanKitty */ = {
 			isa = PBXGroup;
 			children = (
 				AC903D1B1ED31F150016910C /* AppDelegate.swift */,
 				ACC19D1C1FA608150026D272 /* Constants.swift */,
+				5D59497D2D32E4DD005AFFB3 /* GameConstraints.swift */,
 				AC8B580F209E614700DBBC25 /* Storyboards */,
 				AC8B580D209E60A700DBBC25 /* View Controllers */,
 				ACE9277620A6D60200E2B627 /* Views */,
@@ -243,13 +255,14 @@
 				AC8B5810209E61CF00DBBC25 /* Resources */,
 				AC8B580E209E60E800DBBC25 /* Supporting Files */,
 			);
-			path = BobRunner;
+			path = NyanKitty;
 			sourceTree = "<group>";
 		};
 		ACE9277620A6D60200E2B627 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				ACE9277420A648E300E2B627 /* ButtonView.swift */,
+				5D5949812D32E6CB005AFFB3 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,22 +270,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC903D171ED31F150016910C /* BobRunner */ = {
+		AC903D171ED31F150016910C /* NyanKitty */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC903D301ED31F150016910C /* Build configuration list for PBXNativeTarget "BobRunner" */;
+			buildConfigurationList = AC903D301ED31F150016910C /* Build configuration list for PBXNativeTarget "NyanKitty" */;
 			buildPhases = (
 				AC903D141ED31F150016910C /* Sources */,
 				AC903D151ED31F150016910C /* Frameworks */,
 				AC903D161ED31F150016910C /* Resources */,
-				ACB7200E1EF96F74005F6720 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BobRunner;
+			name = NyanKitty;
 			productName = BobRunner;
-			productReference = AC903D181ED31F150016910C /* BobRunner.app */;
+			productReference = AC903D181ED31F150016910C /* NyanKitty.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -281,32 +293,35 @@
 		AC903D101ED31F150016910C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = "Horváth Balázs";
 				TargetAttributes = {
 					AC903D171ED31F150016910C = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UW8QF9DSWQ;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AC903D131ED31F150016910C /* Build configuration list for PBXProject "BobRunner" */;
+			buildConfigurationList = AC903D131ED31F150016910C /* Build configuration list for PBXProject "NyanKitty" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = AC903D0F1ED31F150016910C;
+			packageReferences = (
+				5D5949832D3301C6005AFFB3 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = AC903D191ED31F150016910C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC903D171ED31F150016910C /* BobRunner */,
+				AC903D171ED31F150016910C /* NyanKitty */,
 			);
 		};
 /* End PBXProject section */
@@ -337,23 +352,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		ACB7200E1EF96F74005F6720 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#exit\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		AC903D141ED31F150016910C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -361,8 +359,10 @@
 			files = (
 				AC903D221ED31F150016910C /* GameScene.swift in Sources */,
 				AC1A69FB1F87F8AA0066CED5 /* Stage.swift in Sources */,
+				5D59497E2D32E4E8005AFFB3 /* GameConstraints.swift in Sources */,
 				AC903D241ED31F150016910C /* GameViewController.swift in Sources */,
 				AC9048BF2173DB1E001F370A /* SKNodeExtension.swift in Sources */,
+				5D5949802D32E61A005AFFB3 /* GameOverScene.swift in Sources */,
 				AC903D1C1ED31F150016910C /* AppDelegate.swift in Sources */,
 				AC312DEC1EF4586E004CBBA0 /* Cat.swift in Sources */,
 				AC98E78D1EE367A70009DD66 /* Audio.swift in Sources */,
@@ -371,6 +371,7 @@
 				ACE9277520A648E300E2B627 /* ButtonView.swift in Sources */,
 				AC8B5820209F2ECB00DBBC25 /* UIButtonExtensions.swift in Sources */,
 				ACC19D1D1FA608150026D272 /* Constants.swift in Sources */,
+				5D5949822D32E6D3005AFFB3 /* ContentView.swift in Sources */,
 				AC9048BD2173DB09001F370A /* SKActionExtensions.swift in Sources */,
 				AC8B581A209EED6100DBBC25 /* SKViewExtensions.swift in Sources */,
 				AC9048BB2173DAF6001F370A /* SKTextureExtension.swift in Sources */,
@@ -403,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -424,6 +426,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -434,6 +437,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -448,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -462,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -483,6 +488,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -493,6 +499,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -501,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -515,18 +522,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UW8QF9DSWQ;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				DEVELOPMENT_TEAM = 2GPNHP5FVA;
 				INFOPLIST_FILE = "$(SRCROOT)/BobRunner/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_KEY_CFBundleDisplayName = NyanKitty;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = balazs630.BobRunner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NyanKitty.NyanKittySpaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -534,25 +544,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UW8QF9DSWQ;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				DEVELOPMENT_TEAM = 2GPNHP5FVA;
 				INFOPLIST_FILE = "$(SRCROOT)/BobRunner/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				INFOPLIST_KEY_CFBundleDisplayName = NyanKitty;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = balazs630.BobRunner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NyanKitty.NyanKittySpaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC903D131ED31F150016910C /* Build configuration list for PBXProject "BobRunner" */ = {
+		AC903D131ED31F150016910C /* Build configuration list for PBXProject "NyanKitty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC903D2E1ED31F150016910C /* Debug */,
@@ -561,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC903D301ED31F150016910C /* Build configuration list for PBXNativeTarget "BobRunner" */ = {
+		AC903D301ED31F150016910C /* Build configuration list for PBXNativeTarget "NyanKitty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC903D311ED31F150016910C /* Debug */,
@@ -571,6 +584,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D5949832D3301C6005AFFB3 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.57.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D5949842D3301C6005AFFB3 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D5949832D3301C6005AFFB3 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		5D5949862D3301C6005AFFB3 /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D5949832D3301C6005AFFB3 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = swiftlint;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC903D101ED31F150016910C /* Project object */;
 }
